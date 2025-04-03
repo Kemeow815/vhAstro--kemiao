@@ -4,6 +4,13 @@ export default {
   // api 为空则使用 data 静态数据 
   // 注意：图片请用 vh-img-flex 类包裹
   data: [
+{
+      "date": "2025-04-03 23:52:34",
+      "tags": [
+        "日记"
+      ],
+      "content": "准备上床，今天写了篇日记和git笔记～"
+    },
     {
       "date": "2025-04-03 18:42:16",
       "tags": [
