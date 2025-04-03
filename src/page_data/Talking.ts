@@ -5,6 +5,13 @@ export default {
   // 注意：图片请用 vh-img-flex 类包裹
   data: [
     {
+      "date": "2025-04-03 18:42:16",
+      "tags": [
+        "blog搭建"
+      ],
+      "content": "重塑了一下vhastro"
+    },
+    {
       "date": "2025-04-02 23:32:16",
       "tags": [
         "blog"
