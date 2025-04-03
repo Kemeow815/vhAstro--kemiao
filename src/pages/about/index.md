@@ -1,66 +1,166 @@
 ---
 title: "关于"
 h1: "关于我"
-desc: "Hi there, I’m Han 👋"
+desc: "Hi there, I’m Ke Miao 👋"
 layout: "@/layouts/PageLayout/PageLayout.astro"
 type: "about"
 ---
 
-:::note{type="success"}
-我是韩小韩，一位对技术充满热情、涉猎广泛的探索者，同时也是一名热衷于探索前沿技术的实践者。
+<style>
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #eee;
+}
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #4a90e2;
+  border: 2px solid #fff;
+}
+.payment-container {
+  display: flex;
+  flex-direction: column; /* 改为垂直排列 */
+  gap: 20px;
+  margin: 20px 0;
+  align-items: center; /* 居中排列 */
+}
+.payment-box {
+  width: 50%; /* 控制容器宽度为父级一半 */
+  text-align: center;
+}
+.payment-box img {
+  max-width: 150px; /* 图片宽度改为原来一半 */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.tag-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #f0f2f5;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+.contact-list a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+.contact-list a:hover {
+  text-decoration: underline;
+}
+</style>
 
-我始终保持对新技术的热情，并将我的知识与经验分享在我的博客中。
+## 我？
 
-我的技术兴趣广泛，涵盖前端工程、云计算、自托管服务、AI 应用以及网络架构优化。我始终相信，优秀的技术人不仅要有深度，更要有广度，因此我不断学习新知识，并将其转化为实际解决方案。
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <strong>2023年年初</strong><br>
+    接触小绿书，从此一发不可收拾
+  </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <strong>2023年末</strong><br>
+    接触TG，认识资源分享博主：
+    <a href="https://t.me/txwl666">资源分享</a>、<a href="https://t.me/haoruanfenxiang">好软分享</a>
+  </div>
 
-我期待在这里与你分享我的见解、经验和最新的技术动态。
-:::
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <strong>2024年末</strong><br>
+    接触博客，首个博客：
+    <a href="https://github.com/ccbikai/BroadcastChannel">TG博客</a> →
+    <a href="https://hexo.io/zh-cn/">Hexo</a> →
+    <a href="https://butterfly.js.org/">Butterfly主题</a> →
+    <a href="https://vercel.com/">Vercel</a>托管
+  </div>
 
-
-**在 Web 开发方面**，我深耕 Vue.js 生态，并且关注了现代 CSS 框架如 Tailwind CSS。同时，对前端构建工具如 Webpack、Rollup 和 Vite 以及代码质量和规范工具如 ESLint 进行了研究，我还关注了前端性能优化，例如代码分割、资源加载策略以及 Astro、Hexo 等现代网站构建工具的使用。
-
-**在后端开发和云计算领域**，我对 Node.js 生态系统非常熟悉，并积极探索 Serverless 架构。我长期使用 Cloudflare Workers、Vercel 和腾讯云 EdgeOne 等平台，优化边缘计算、KV 存储和全球 CDN 加速方案，确保应用的高可用性和低延迟。
-
-**在自托管（Homelab）和个人服务器管理方面**，我对个人服务器运维充满热情，搭建了基于 Jellyfin 的媒体中心、Home Assistant 智能家居系统，并利用 OpenWrt 优化家庭网络。在 Linux 系统管理、Docker 容器化部署和自动化脚本方面积累了丰富经验。
-
-**在人工智能与大型语言模型（LLMs）领域**，我密切关注 AI 领域的发展，尤其是 DeepSeek、Gemini 和 Claude 等大模型的应用。我尝试将 AI 能力整合到开发流程中，例如自动化文档生成、代码优化辅助，并且对 AI SDK 和相关工具保持关注。
-
-**在网络与 DevOps 方面**，我熟悉 DNS 解析、CDN 加速、SSL 证书管理，并研究 TCP/IP、HTTP/3 等协议优化。我实践 Git 工作流、CI/CD 自动化（GitHub Actions / Cloudflare Pages），并利用 Docker 实现开发环境标准化。
-
-**🚀 技术理念**
-
-- **持续学习：** 技术日新月异，我始终保持开放心态，学习新框架、新工具，并评估其适用性。
-- **实践驱动：** 无论是个人项目还是开源贡献，我都倾向于动手实践，而非仅停留在理论层面。
-- **效率优先：** 我注重自动化与工具链优化，减少重复劳动，提升开发体验。
-
-**🎯 未来方向**
-未来，我计划进一步探索：
-
-- **边缘计算与全球化部署**，优化分布式应用的性能。
-- **AI 增强开发**，探索 LLM 在代码生成、调试和文档管理中的应用。
-- **智能家居与自动化**，结合 Home Assistant 打造更高效的家庭 lab。
-
-## Languages and Tools
-
-<div class="language-tool">
-  <a href="https://www.w3.org/html/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /></a>
-  <a href="https://nodejs.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" /></a>
-  <a href="https://www.php.net/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/php-3776AB?style=for-the-badge&logo=php&logoColor=white" alt="PHP" /></a>
-  <a href="https://www.python.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /></a>
-  <a href="https://git-scm.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" /> </a>
-  <a href="https://www.linux.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" /></a>
-  <a href="https://www.nginx.com" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" /></a>
-  <a href="https://www.docker.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
-  <a href="https://vuejs.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js" /></a>
-  <a href="https://vitejs.dev/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
-  <a href="https://webpack.js.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" /></a>
-  <a href="https://www.electronjs.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" alt="Electron" /></a>
-  <a href="https://expressjs.com" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" /></a>
-  <a href="https://tailwindcss.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /></a>
-  <a href="https://www.sqlite.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" /></a>
-  <a href="https://code.visualstudio.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" /></a>
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <strong>2025年四月</strong><br>
+    接触vhastro主题，搭建当前博客<br>
+    单机游戏爱好者：<em>饥荒，启动！杰出SM！</em>
+  </div>
 </div>
+
+## Tags
+
+<div class="tag-list">
+  <span class="tag">大学牲</span>
+  <span class="tag">伪二次元</span> 
+  <span class="tag">游戏党</span>
+  <span class="tag">瞎折腾</span>
+  <span class="tag">搞事情</span>
+  <span class="tag">日常生产bug</span>
+</div>
+
+## 找我？
+
+<div class="contact-list">
+  <p>📱 QQ: 3149261770<br>
+  📧 邮箱优先级：<br>
+  &nbsp;&nbsp;• <kbd>kemiao@kmblog.icu</kbd> > <kbd>kemiaofx@163.com</kbd><br>
+  ✈️ Telegram：<br>
+  &nbsp;&nbsp;• <a href="https://t.me/kemiaofx_me">频道</a> | 
+  <a href="https://t.me/kemiao_me">群组</a> | 
+  <a href="https://t.me/Kemiaojun">克喵爱吃卤面</a><br>
+  &nbsp;&nbsp;• 建议使用<a href="https://t.me/KemeowBot">机器人</a>联系</p>
+</div>
+
+## 投食
+<div class="payment-container">
+  <div class="payment-box">
+    <img src="https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137037.jpg" alt="微信支付">
+    <p>微信</p>
+  </div>
+  <div class="payment-box">
+    <img src="https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137332.jpg" alt="支付宝">
+    <p>支付宝</p>
+  </div>
+</div>
+
+## 版权？
+
+分享的资源大部分为开源，使用Android、网站、项目等，如果作者不允许传播，可以联系我删除。
+
+所有文章如无特别声明均可视为采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可，这意味着你无需询问我是否可以转载。
+
+但是作为附加条件，你必须要在转载前在我这里留言告诉我你转载到了何处，并且附上转载的地址链接，同时禁止转载到非法以及黄色网站。
+
+于此同时，你也必须在我要求你删除转载的文章时删除你转载的文章，并且在取得我的同意前不得再次转载至此网站。
+
+所有尚未标注采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可字样的内容被默认视为禁止一切行为的转载，但是允许在取得我的同意之后进行引用（需要说明引用至何处作何作用）。
+
+如果有特殊声明的页面或文章，请按照此文章的特殊声明来判断是否允许转载，如果无法确定你也可以来询问我是否可以转载。
+
+关于代码方面，请按照相应的仓库许可证来判断是否可以转载和引用。
+
+如果没有添加许可证或者有疑问的，请留言询问我是否可以转载和引用。
+
+但不论是何种行为的引用或者转载，在尚未取得我的同意之前都禁止用于一切的商业行为上的用途。
 
 ## 小站点
 
