@@ -56,6 +56,8 @@
 
               &>.avatar {
                 transform: scale(1.2) rotate(8deg);
+                background-color: var(--vh-white-color);
+                border-color: var(--vh-white-color);
               }
             }
 
@@ -66,7 +68,7 @@
               width: 3.36rem;
               height: 3.36rem;
               border-radius: 50%;
-              border: solid 1px #E8E8E8;
+              border: solid 1px var(--vh-font-16);
               overflow: hidden;
               opacity: 1;
               transition: all .18s;
@@ -77,7 +79,7 @@
               display: flex;
               flex-direction: column;
               justify-content: center;
-              gap: 0.388rem;
+              gap: 0.68rem;
               width: 100%;
               height: 100%;
               overflow: hidden;
@@ -91,17 +93,12 @@
 
               &>p {
                 box-sizing: border-box;
+                padding: 0;
                 width: 100%;
                 height: max-content;
                 font-size: 0.81rem;
-                color: #858585;
+                color: var(--vh-font-56);
                 line-height: 1rem;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                text-overflow: ellipsis;
-                word-break: break-all;
-                overflow: hidden;
               }
             }
           }
@@ -124,7 +121,7 @@
             height: max-content;
             border-radius: 0.5rem;
             box-shadow: var(--vh-box-shadow);
-            background: var(--vh-white-color) linear-gradient(90deg, #EDEEF388, var(--vh-white-color)) no-repeat 100% 100% / 0 1px;
+            background: var(--vh-white-color) linear-gradient(90deg, var(--vh-font-6), var(--vh-white-color)) no-repeat 100% 100% / 0 1px;
             background-position: 0 100%;
             background-size: 0 100%;
             transition: .7s cubic-bezier(.6, .1, 0, 1), background-position 0s;
@@ -154,15 +151,9 @@
 
               &>p {
                 padding: 0;
-                color: #26262680;
+                color: var(--vh-font-66);
                 font-size: 0.875rem;
                 line-height: 1.8;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                text-overflow: ellipsis;
-                word-break: break-all;
-                overflow: hidden;
               }
 
               &>footer {
@@ -179,23 +170,26 @@
                   display: flex;
                   align-items: center;
                   gap: 0.5rem;
-                  height: 1.56rem;
+                  height: max-content;
                   font-size: 0.8rem;
                   overflow: hidden;
 
                   &>em {
                     font-style: normal;
                     flex: 1;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
                   }
 
                   &>img {
+                    box-sizing: border-box;
+                    padding: 0.188rem;
                     flex-shrink: 0;
-                    width: 1.56rem;
-                    height: 1.56rem;
+                    width: 1.88rem;
+                    height: 1.88rem;
+                    object-fit: cover;
+                    border: 1px solid var(--vh-font-16);
                     border-radius: 50%;
+                    background-color: var(--vh-white-color);
+                    overflow: hidden;
                   }
                 }
 
@@ -206,8 +200,8 @@
                 &>time {
                   flex-shrink: 0;
                   width: max-content;
-                  padding: 0.5rem;
-                  background: #F7F7F7;
+                  padding: 0.28rem 0.5rem;
+                  background: var(--vh-font-6);
                   border-radius: 0.8rem;
                 }
               }
@@ -266,7 +260,7 @@
 
                 &>time {
                   font-size: 0.7rem;
-                  color: #858585;
+                  color: var(--vh-font-66);
                 }
               }
             }
@@ -311,10 +305,11 @@
               &>.geographical-location {
                 display: flex;
                 align-items: center;
+                justify-content: flex-end;
                 gap: 0.2rem;
                 font-style: normal;
                 font-size: 14px;
-                color: #49c7cc;
+                color: var(--vh-success);
 
                 &::before {
                   content: '';

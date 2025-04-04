@@ -23,6 +23,10 @@
 	--vh-main-color-28: rgb(from var(--vh-main-color) r g b / 28%);
 	--vh-main-color-16: rgb(from var(--vh-main-color) r g b / 16%);
 	--vh-main-color-6: rgb(from var(--vh-main-color) r g b / 6%);
+
+	// Default 
+	--vh-default: #BEC4CC;
+	--vh-default-hover: #BEC4CC18;
 	// Info 
 	--vh-info: #3253b4;
 	--vh-info-hover: #3253b418;
@@ -155,19 +159,32 @@ img[data-vh-lz-src] {
 
 // 超出一行省略
 .vh-ellipsis {
-	text-overflow: ellipsis;
-	white-space: nowrap;
 	overflow: hidden;
-}
-
-// 超出两行省略
-.vh-ellipsis-2 {
+	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	overflow: hidden;
-}
+	word-break: break-all; // 解决纯数字/字母换行问题
 
+	// 单行省略（默认）
+	&:not([class*="line-"]) {
+		white-space: nowrap;
+		display: block;
+	}
+
+	.line-clamp(@lines) {
+		white-space: normal;
+		-webkit-line-clamp: @lines;
+	}
+
+	// 动态生成行数类
+	&.line-2 {
+		.line-clamp(2)
+	}
+
+	&.line-3 {
+		.line-clamp(3)
+	}
+}
 
 @media screen and (max-width: 768px) {
 	// 手机端 禁止选择

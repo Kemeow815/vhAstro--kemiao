@@ -61,6 +61,13 @@
 - 参考官方指南将博客部署至 Vercel, Netlify,Cloudflare Pages, GitHub Pages 等
 - 部署前需编辑 `astro.config.mjs` 中的站点设置。
 
+### 自动部署
+
+**Vercel 部署：**
+
+[![vhAstro-Theme](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/uxiaohan/vhAstro-Theme)
+
+
 ### 使用命令
 
 ```bash
