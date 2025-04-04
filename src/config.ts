@@ -59,7 +59,7 @@ export default {
     { text: 'Github', link: 'https://github.com/Kemeow815', icon: 'WebSite_github' },
     { text: 'Telegram', link: 'https://t.me/KemiaoJun', icon: 'icon-telegram' },
     { text: '每日热榜', link: 'https://hot.vvhan.com', icon: 'WebSite_hot' },
-    { text: '骤雨重山图床', link: 'https://wp-cdn.4ce.cn', icon: 'WebSite_img' },
+    { text: '克喵图床', link: 'https://img.kemiaosw.top', icon: 'WebSite_img' },
     { text: 'HanAnalytics', link: 'https://analytics.vvhan.com', icon: 'WebSite_analytics' },
     { text: "Email", link: 'mailto:kemiaofx@163.com', icon: 'WebSite_email' },
   ],
