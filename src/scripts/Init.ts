@@ -1,6 +1,8 @@
 import { inRouter, outRouter } from "@/utils/updateRouter";
 // Banner 打字效果
 import TypeWriteInit from "@/scripts/TypeWrite";
+// 泡泡🫧效果
+import PaoPaoInit from "@/scripts/PaoPao";
 // 初始化文章代码块
 import codeInit from "@/scripts/Code";
 // 初始化视频播放器
@@ -45,8 +47,6 @@ const videoList: any[] = [];
 const MusicList: any[] = [];
 let commentLIst: any = { walineInit: null };
 const indexInit = async (only: boolean = true) => {
-  // 打字效果
-  only && TypeWriteInit();
   // 初始化网站运行时间
   only && initWebSiteTime();
   // 初始化BackTop组件
@@ -79,6 +79,10 @@ const indexInit = async (only: boolean = true) => {
   checkComment() && commentInit(checkComment(), commentLIst)
   // Han Analytics 统计
   HanAnalyticsInit();
+  // 打字效果
+  only && TypeWriteInit();
+  // 泡泡🫧效果
+  PaoPaoInit();
   // 预加载搜索数据
   only && searchFn("");
   // 初始化搜索功能

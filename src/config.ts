@@ -19,7 +19,12 @@ export default {
   // 顶部 Banner 配置
   HomeBanner: {
     enable: true,
-    cover: '/assets/images/home-banner.webp'
+    // 首页高度
+    HomeHeight: '38.88rem',
+    // 其他页面高度
+    PageHeight: '28.88rem',
+    // 背景
+    background: "url('/assets/images/home-banner.webp') no-repeat center 60%/cover",
   },
   // 博客主题配置
   Theme: {

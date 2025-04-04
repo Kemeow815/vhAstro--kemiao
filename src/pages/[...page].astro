@@ -31,7 +31,7 @@ import Pagination from "@/components/Pagination/Pagination.astro";
 const currentPage = page_data.url.current.replace("/", "");
 ---
 
-<Layout title={currentPage ? `第${currentPage}页文章` : ""} description={Description}>
+<Layout title={currentPage ? `第${currentPage}页文章` : ""} description={Description} Home={true}>
 	<section class="article-list-main">
 		<section class="article-list">
 			<!-- 文章列表 -->
