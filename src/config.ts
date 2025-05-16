@@ -65,11 +65,11 @@ export default {
     // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: 'Github', link: 'https://github.com/Kemeow815', icon: 'WebSite_github' },
-    { text: 'Telegram', link: 'https://t.me/KemiaoJun', icon: 'icon-telegram' },
-    { text: '每日热榜', link: 'https://hot.vvhan.com', icon: 'WebSite_hot' },
-    { text: '克喵图床', link: 'https://img.kemiaosw.top', icon: 'WebSite_img' },
-    { text: 'HanAnalytics', link: 'https://analytics.vvhan.com', icon: 'WebSite_analytics' },
+    { text: 'Telegram', link: 'https://t.me/KemiaoJun', icon: 'icon-telegram' },   { text: '网易云歌单', link: 'https://music.163.com/#/playlist?id=13681647281', icon: 'brand-beats' },
     { text: "Email", link: 'mailto:me@kemiaosw.top', icon: 'WebSite_email' },
+    { text: "Twitter", link: 'https://twitter.com/kemiaosw', icon: "brand-x" },
+    { text: "QQ", link: 'https://qm.qq.com/q/m8FW8Y6TkY', icon: 'QQ' },
+    { text: "Bilibili", link: 'https://space.bilibili.com/3546643173477234', icon: 'Bilibili' }
   ],
   // 侧边栏展示
   AsideShow: {
@@ -89,7 +89,10 @@ export default {
     'https://analytics.vvhan.com',
     'https://vh-api.4ce.cn',
     'https://registry.npmmirror.com',
-    'https://pagead2.googlesyndication.com'
+    'https://pagead2.googlesyndication.com',
+    'https://cdn.jsdelivr.net',
+    'https://cdn.staticfile.org',
+    'https://cdn.bootcdn.net'
   ],
   // 博客音乐组件解析接口
   vhMusicApi: 'https://vh-api.4ce.cn/blog/meting',

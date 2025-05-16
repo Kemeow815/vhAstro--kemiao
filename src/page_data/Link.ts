@@ -14,6 +14,12 @@ export default {
       "link": "https://api.vvhan.com",
       "avatar": "https://api.vvhan.com/static/images/logo.webp",
       "descr": "免费Web API数据接口调用服务平台."
+    },
+    {
+      "name": "wallleap",
+      "link": "https://myblog.wallleap.cn/",
+      "avatar": "https://gravatar.wallleap.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256",
+      "descr": "Luwang's blog"
     }
   ]
 }

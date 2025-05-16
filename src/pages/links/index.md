@@ -1,7 +1,7 @@
 ---
 title: "友情链接"
 h1: "朋友圈 👭"
-desc: "天下快意之事莫若友。"
+desc: "记录着克喵的朋友们"
 layout: "@/layouts/ToolLayout/ToolLayout.astro"
 type: "links"
 ---
@@ -13,8 +13,8 @@ type: "links"
 :::
 
 ```yaml
-name: 韩小韩博客
-link: https://www.vvhan.com/
-avatar: https://q1.qlogo.cn/g?b=qq&nk=1655466387&s=640
-desc: 运气是计划之外的东西.
+name: 喵落阁
+link: https://zhan.kemiao.online/
+avatar: https://cn.cravatar.com/avatar/7614B285E795F21E780247019C4E15C4?size=256
+desc: 愿你看清一切真相后，依旧热爱你的家人和朋友。
 ```
