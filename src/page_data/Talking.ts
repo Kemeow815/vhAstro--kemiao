@@ -1,9 +1,16 @@
 export default {
   // API 接口请求优先，数据格式保持和 data 一致
-  api: '',
+  api: 'https://talking.kemeow.top/shuoshuo.json',
   // api 为空则使用 data 静态数据 
   // 注意：图片请用 vh-img-flex 类包裹
   data: [
+{
+      "date": "2025-04-05 00:50:34",
+      "tags": [
+        "日记"
+      ],
+      "content": "修补了一下博客，发布了一篇文章"
+    },
 {
       "date": "2025-04-03 23:52:34",
       "tags": [
