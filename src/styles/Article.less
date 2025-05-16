@@ -25,10 +25,15 @@ article.vh-article-main {
     }
 
     &>.article-meta {
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       gap: 0.88rem;
       font-size: 0.85rem;
+      width: 100%;
+      height: 0.98rem;
+      overflow: hidden;
+
 
       &>.article-meta-item {
         display: flex;
@@ -40,6 +45,7 @@ article.vh-article-main {
           flex-shrink: 0;
           height: 0.888rem;
           width: auto;
+          object-fit: contain;
         }
 
         &>time {
@@ -158,7 +164,17 @@ article.vh-article-main {
           z-index: -1;
         }
 
-        &:nth-of-type(2n+1) {
+
+
+        &:nth-of-type(6n+1) {
+          color: var(--vh-default);
+
+          &::after {
+            background-color: var(--vh-default-hover);
+          }
+        }
+
+        &:nth-of-type(6n+2) {
           color: var(--vh-info);
 
           &::after {
@@ -166,7 +182,7 @@ article.vh-article-main {
           }
         }
 
-        &:nth-of-type(2n+2) {
+        &:nth-of-type(6n+3) {
           color: var(--vh-success);
 
           &::after {
@@ -174,7 +190,7 @@ article.vh-article-main {
           }
         }
 
-        &:nth-of-type(2n+3) {
+        &:nth-of-type(6n+4) {
           color: var(--vh-warning);
 
           &::after {
@@ -182,7 +198,7 @@ article.vh-article-main {
           }
         }
 
-        &:nth-of-type(2n+4) {
+        &:nth-of-type(6n+5) {
           color: var(--vh-error);
 
           &::after {
@@ -190,7 +206,7 @@ article.vh-article-main {
           }
         }
 
-        &:nth-of-type(2n+5) {
+        &:nth-of-type(6n+6) {
           color: var(--vh-import);
 
           &::after {

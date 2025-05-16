@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 核心方法
-    function setGlobals() {
-      state.canvas = document.querySelector(".vh-aside-item.user > canvas");
+    function setGlobals(dom) {
+      state.canvas = document.querySelector(dom);
       state.ctx = state.canvas.getContext("2d");
     }
 
@@ -178,7 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 公共接口
     return {
       init: () => {
-        setGlobals();
+        if (!document.querySelector('.vh-aside-item.user > canvas')) return;
+        setGlobals(".vh-aside-item.user > canvas");
         initializeButton();
         window.addEventListener('resize', handleResize);
       }

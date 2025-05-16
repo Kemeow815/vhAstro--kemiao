@@ -1,3 +1,11 @@
+/*
+ * @Author: Han
+ * @Date: 2025-04-07 11:31:34
+ * @LastEditors: Han
+ * @LastEditTime: 2025-04-21 14:32:19
+ * @Description: 
+ * 
+ */
 import SITE_INFO from "@/config";
 import { LoadScript } from "@/utils/index";
 declare const twikoo: any;
@@ -25,6 +33,7 @@ const WalineFn = async (commentDOM: string, walineInit: any) => {
       "https://registry.npmmirror.com/@waline/emojis/1.3.0/files/tieba/tieba_awkward.png",
       "https://registry.npmmirror.com/@waline/emojis/1.3.0/files/tieba/tieba_sleep.png",
     ],
+    requiredMeta: ['nick', 'mail'],
     imageUploader: async (file: any) => {
       const body = new FormData();
       body.append('file', file);

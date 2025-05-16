@@ -19,8 +19,8 @@ import "./Archive.less";
 						<a href={`/article/${_.id}`}>
 							<em>{fmtTime(_.date, "MM-DD")}</em>
 							<i />
-							<span>{_.title}</span>
-							<cite>{_.tags.map((tag: string) => `#${tag}`).join(" ")}</cite>
+							<span class="vh-ellipsis">{_.title}</span>
+							<cite class="vh-ellipsis">{_.tags.map((tag: string) => `#${tag}`).join(" ")}</cite>
 						</a>
 					))}
 				</div>

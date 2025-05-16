@@ -68,38 +68,39 @@ top: true
 
 ## 🚀 使用方法
 
+### 使用 Github 模板
+
 - 使用此模板 [生成新仓库或 Fork 此仓库](https://github.com/new?template_name=vhAstro-Theme&template_owner=uxiaohan)
 - 进行本地开发，Clone 新的仓库，执行 `pnpm install` 以安装依赖
-- 若未安装 pnpm，执行 `npm install -g pnpm`
+- 若未安装 [pnpm](https://pnpm.io)，执行 `npm install -g pnpm`
 - 通过配置文件 `src/config.ts` 自定义博客
 - 执行 pnpm newpost '文章标题' 创建新文章，并在 src/content/posts/ 目录中编辑
 - 参考官方指南将博客部署至 Vercel, Netlify,Cloudflare Pages, GitHub Pages 等
-- 部署前需编辑 `astro.config.mjs` 中的站点设置。
 
+### Vercel 自动部署
 
-## 📄 文章格式
+::btn[Vercel 一键部署]{link="https://vercel.com/new/clone?repository-url=https://github.com/uxiaohan/vhAstro-Theme"}
 
-```md
----
-title: 标题
-categories: 分类
-tags:
-  - 标签1
-  - 标签2
-id: 文章ID
-date: 文章创建日期
-updated: 文章更新日期
-cover: "封面图URL (为空默认随机内置封面 /public/assets/images/banner)"
-recommend: false # 是否推荐文章
-top: false # 是否置顶文章
-hide: false # 是否隐藏文章
-<!-- 页面独有 -->
-type: "links" # 页面类型
-comment: false # 关闭页面评论（默认开启）
----
+### Cloudflare Pages 自动部署
+
+::btn[Cloudflare Pages 一键部署]{link="https://dash.cloudflare.com/?to=/:account/workers-and-pages/create/deploy-to-workers&repository=https://github.com/uxiaohan/vhAstro-Theme" type="warning"}
+
+其他更多部署方式（简简单单闭眼部署），请参考 [Astro 官方文档](https://docs.astro.build/en/guides/integrations-guide/cloudflare/)。
+
+### 使用命令拉取模板
+
+```bash
+# 使用 pnpm
+pnpm create astro@latest --template uxiaohan/vhAstro-Theme astro-blog
+# 或者 yarn
+yarn create astro --template uxiaohan/vhAstro-Theme astro-blog
+# 或者 npm
+npm create astro@latest -- --template uxiaohan/vhAstro-Theme astro-blog
+# 进入项目目录
+cd astro-blog
 ```
 
-## 💻 命令
+### 本地开发
 
 ```bash
 # 安装依赖
@@ -111,6 +112,16 @@ pnpm build
 # 创建新文章
 pnpm newpost '文章标题'
 ```
+
+### ⚠️ Hexo 迁移 Astro 方法
+
+:::note{type="success"}
+将 `Hexo` 博客的 `src/_posts/` 目录下的文章文件，复制到 `Astro` 的 `src/content/blog/` 目录下即可，然后自定义 `src/config.ts` 配置文件去自定义博客。
+
+⚠️ `Hexo` 的部署、使用、自动化部署等方法 完全适用于 `Astro` 博客！
+
+🎉 此时，你已成功迁移 Hexo 博客至 Astro 博客！
+:::
 
 ## 🍬 特色页面
 
@@ -197,6 +208,29 @@ export default {
 }
 ```
 
+## 📄 文章格式
+
+```md
+---
+title: 标题
+categories: 分类
+tags:
+  - 标签1
+  - 标签2
+id: 文章ID
+date: 文章创建日期
+updated: 文章更新日期
+cover: "封面图URL (为空默认随机内置封面 /public/assets/images/banner)"
+recommend: false # 是否推荐文章
+top: false # 是否置顶文章
+hide: false # 是否隐藏文章
+<!-- 页面独有 -->
+type: "links" # 页面类型
+comment: false # 关闭页面评论（默认开启）
+---
+```
+
+
 ## ✅ Lighthouse
 
 ![vhAstro-Theme-Lighthouse](https://uxiaohan.github.io/v2/2025/03/1742543844078.svg)
@@ -243,26 +277,40 @@ export default {
 ## ⚙️ 项目配置
 ```js
 export default {
+  // 网站标题
   Title: '韩小韩博客',
+  // 网站地址
   Site: 'https://www.vvhan.com',
+  // 网站副标题
   Subtitle: '不曾与你分享的时间,我在进步.',
+  // 网站描述
   Description: '韩小韩博客 专注于前开发与相关技术的实战分享，涵盖Vue框架、Node.js、Serverless等，并涉及Node、Python、Linux、Docker等领域。同时，博客也分享作者的生活、音乐和旅行的热爱。',
+  // 网站作者
   Author: '.𝙃𝙖𝙣',
-  Motto: '运气是计划之外的东西.',
+  // 作者头像
   Avatar: 'https://q1.qlogo.cn/g?b=qq&nk=1655466387&s=640',
+  // 网站座右铭
+  Motto: '运气是计划之外的东西.',
   // Cover 网站缩略图
   Cover: '/assets/images/banner/072c12ec85d2d3b5.webp',
-  // 网站创建时间
-  CreateTime: '2021-09-01',
+  // 网站侧边栏公告 (不填写即不开启)
+  Tips: '<p>欢迎光临我的博客 🎉</p><p>这里会分享我的日常和学习中的收集、整理及总结，希望能对你有所帮助:) 💖</p>',
   // 首页打字机文案列表
   TypeWriteList: [
     '不曾与你分享的时间,我在进步.',
     "I am making progress in the time I haven't shared with you.",
   ],
+  // 网站创建时间
+  CreateTime: '2021-09-01',
   // 顶部 Banner 配置
   HomeBanner: {
     enable: true,
-    cover: '/assets/images/home-banner.webp'
+    // 首页高度
+    HomeHeight: '38.88rem',
+    // 其他页面高度
+    PageHeight: '28.88rem',
+    // 背景
+    background: "url('/assets/images/home-banner.webp') no-repeat center 60%/cover",
   },
   // 博客主题配置
   Theme: {
@@ -280,7 +328,7 @@ export default {
   },
   // 导航栏 (新窗口打开 newWindow: true)
   Navs: [
-    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可（封装了 SVG 组件 为了极致压缩 SVG）
+    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: '朋友', link: '/links', icon: 'Nav_friends' },
     { text: '圈子', link: '/friends', icon: 'Nav_rss' },
@@ -292,7 +340,7 @@ export default {
   ],
   // 侧边栏个人网站
   WebSites: [
-    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可（封装了 SVG 组件 为了极致压缩 SVG）
+    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: 'Github', link: 'https://github.com/uxiaohan', icon: 'WebSite_github' },
     { text: '韩小韩API', link: 'https://api.vvhan.com', icon: 'WebSite_api' },
@@ -304,13 +352,9 @@ export default {
   AsideShow: {
     // 是否展示个人网站
     WebSitesShow: true,
-    // 是否展示公告
-    TipsShow: true,
-    // 是否展示数量统计
-    CountShow: true,
     // 是否展示分类
     CategoriesShow: true,
-    // 是否展示个人标签
+    // 是否展示标签
     TagsShow: true,
     // 是否展示推荐文章
     recommendArticleShow: true
@@ -318,6 +362,7 @@ export default {
   // DNS预解析地址
   DNSOptimization: [
     'https://i0.wp.com',
+    'https://cn.cravatar.com',
     'https://analytics.vvhan.com',
     'https://vh-api.4ce.cn',
     'https://registry.npmmirror.com',
@@ -342,11 +387,11 @@ export default {
   HanAnalytics: { enable: true, server: 'https://analytics.vvhan.com', siteId: 'Hello-HanHexoBlog' },
   // Google 广告
   GoogleAds: {
-    ad_Client: 'ca-pub-xxxxxxxxxx',
+    ad_Client: '', //ca-pub-xxxxxx
     // 侧边栏广告(不填不开启)
-    asideAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`,
+    asideAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`,
     // 文章页广告(不填不开启)
-    articleAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`
+    articleAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`
   },
   // 文章内赞赏码
   Reward: {
@@ -354,7 +399,9 @@ export default {
     AliPay: '/assets/images/alipay.webp',
     // 微信收款码
     WeChat: '/assets/images/wechat.webp'
-  }
+  },
+  // 页面阻尼滚动速度
+  ScrollSpeed: 666
 }
 ```
 
@@ -611,9 +658,9 @@ $\cup$、$\cap$、$\in$、$\notin$、$\ni$、$\subset$、$\subseteq$、$\supset$
 ::vhLivePhoto{photo="https://static.vvhan.com/img/2.webp" video="https://static.vvhan.com/img/2.mp4"}
 ```
 
-::vhLivePhoto{photo="/public/assets/livephoto/1.webp" video="/public/assets/livephoto/1.mp4" type="y"}
+::vhLivePhoto{photo="/assets/livephoto/1.webp" video="/assets/livephoto/1.mp4" type="y"}
 
-::vhLivePhoto{photo="/public/assets/livephoto/2.webp" video="/public/assets/livephoto/2.mp4"}
+::vhLivePhoto{photo="/assets/livephoto/2.webp" video="/assets/livephoto/2.mp4"}
 
 ### Music 组件
 

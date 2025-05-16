@@ -36,7 +36,7 @@ import GoogleAdInit from "@/scripts/GoogleAd";
 // Han Analytics 统计
 import HanAnalyticsInit from "@/scripts/HanAnalytics";
 //  谷歌 SEO 推送
-import GoogleSEOInit from "@/scripts/GoogleSeoPush";
+import SeoPushInit from "@/scripts/SeoPush";
 // SmoothScroll 滚动优化
 import SmoothScroll from "@/scripts/Smoothscroll";
 
@@ -74,7 +74,7 @@ const indexInit = async (only: boolean = true) => {
   // Google 广告
   GoogleAdInit();
   // 谷歌 SEO 推送
-  GoogleSEOInit();
+  SeoPushInit();
   // 文章评论初始化
   checkComment() && commentInit(checkComment(), commentLIst)
   // Han Analytics 统计

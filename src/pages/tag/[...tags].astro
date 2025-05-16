@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths(): Promise<any> {
 	const posts = await getCollection("blog");
 	let tagList: any = [];
-	posts.forEach(post => (tagList = [...tagList, ...post.data.tags]));
+	posts.forEach(post => (tagList = [...tagList, ...(post.data.tags || [])]));
 	return [...new Set(tagList)].map(tags => ({ params: { tags } }));
 }
 // 获取分类列表
@@ -15,8 +15,6 @@ import SITE_CONFIG from "@/config";
 const { Description } = SITE_CONFIG;
 // 公共 Layout
 import Layout from "@/layouts/Layout/Layout.astro";
-// Aside组件
-import Aside from "@/components/Aside/Aside.astro";
 // 文章列表组件
 import Archive from "@/components/Archive/Archive.astro";
 ---

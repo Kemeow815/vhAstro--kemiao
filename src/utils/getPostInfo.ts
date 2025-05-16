@@ -17,7 +17,7 @@ const getCountInfo = () => {
 // 获取文章标签
 const getTags = () => {
   const tagList = posts.reduce((acc: any, i: any) => {
-    i.data.tags.forEach((tag: string) => {
+    (i.data.tags || []).forEach((tag: string) => {
       acc[tag] = (acc[tag] || 0) + 1;
     });
     return acc;

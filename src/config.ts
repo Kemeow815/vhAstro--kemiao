@@ -1,21 +1,29 @@
 export default {
-  Title: '克喵の小栈',
-  // 访问的域名
+  // 网站标题
+  Title: '喵落阁',
+  // 网站地址
   Site: 'https://zhan.kemiao.online',
-  Subtitle: '每一段旅行都有终点~.',
-  Description: '每一段旅行都有终点~.',
+  // 网站副标题
+  Subtitle: '克喵的博客',
+  // 网站描述
+  Description: '愿你看清一切真相后，依旧热爱你的家人和朋友。',
+  // 网站作者
   Author: '克喵爱吃卤面',
-  Motto: '每一段旅行都有终点~',
-  Avatar: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/Kemeow815avatar.png',
+  // 作者头像
+  Avatar: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/kemiaotouxiang.jpg',
+  // 网站座右铭
+  Motto: '奇迹只能一时，命运总是漫长。',
   // Cover 网站缩略图
   Cover: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/back2.jpg',
-  // 网站创建时间
-  CreateTime: '2025-04-02',
-  // 导航栏 (新窗口打开 newWindow: true)
+  // 网站侧边栏公告 (不填写即不开启)
+  Tips: '<p>欢迎光临我的博客 🎉</p><p>这里会分享我的资源分享、生活记录和踩坑教程:) 💖</p>',
+  // 首页打字机文案列表
   TypeWriteList: [
     '每一段旅行都有终点~',
     "Every journey has an end ~",
   ],
+  // 网站创建时间
+  CreateTime: '2025-04-02',
   // 顶部 Banner 配置
   HomeBanner: {
     enable: true,
@@ -42,7 +50,7 @@ export default {
   },
   // 导航栏 (新窗口打开 newWindow: true)
   Navs: [
-    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可（封装了 SVG 组件 为了极致压缩 SVG）
+    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: '朋友', link: '/links', icon: 'Nav_friends' },
     { text: '圈子', link: '/friends', icon: 'Nav_rss' },
@@ -54,26 +62,22 @@ export default {
   ],
   // 侧边栏个人网站
   WebSites: [
-    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可（封装了 SVG 组件 为了极致压缩 SVG）
+    // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: 'Github', link: 'https://github.com/Kemeow815', icon: 'WebSite_github' },
     { text: 'Telegram', link: 'https://t.me/KemiaoJun', icon: 'icon-telegram' },
     { text: '每日热榜', link: 'https://hot.vvhan.com', icon: 'WebSite_hot' },
     { text: '克喵图床', link: 'https://img.kemiaosw.top', icon: 'WebSite_img' },
     { text: 'HanAnalytics', link: 'https://analytics.vvhan.com', icon: 'WebSite_analytics' },
-    { text: "Email", link: 'mailto:kemiaofx@163.com', icon: 'WebSite_email' },
+    { text: "Email", link: 'mailto:me@kemiaosw.top', icon: 'WebSite_email' },
   ],
   // 侧边栏展示
   AsideShow: {
     // 是否展示个人网站
     WebSitesShow: true,
-    // 是否展示公告
-    TipsShow: true,
-    // 是否展示数量统计
-    CountShow: true,
     // 是否展示分类
     CategoriesShow: true,
-    // 是否展示个人标签
+    // 是否展示标签
     TagsShow: true,
     // 是否展示推荐文章
     recommendArticleShow: true
@@ -81,6 +85,7 @@ export default {
   // DNS预解析地址
   DNSOptimization: [
     'https://i0.wp.com',
+    'https://cn.cravatar.com',
     'https://analytics.vvhan.com',
     'https://vh-api.4ce.cn',
     'https://registry.npmmirror.com',
@@ -116,6 +121,14 @@ export default {
     // 支付宝收款码
     AliPay: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137332.jpg',
     // 微信收款码
-    WeChat: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137037.jpg'
-  }
+    WeChat: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505050804592.jpg'
+  },
+  // 访问网页 自动推送到搜索引擎
+  SeoPush: {
+    enable: false,
+    serverApi: '',
+    paramsName: 'url'
+  },
+  // 页面阻尼滚动速度
+  ScrollSpeed: 666
 }

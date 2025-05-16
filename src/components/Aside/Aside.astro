@@ -2,7 +2,6 @@
 // 静态图片
 // Svg 组件
 import Svg from "@/components/Svg/Svg.astro";
-import { Image } from "astro:assets";
 // 时间处理
 import { fmtTime } from "@/utils/index";
 // 获取用户配置数据
@@ -14,7 +13,7 @@ import { getCategories, getTags, getRecommendArticles, getCountInfo } from "@/ut
 // 分类列表
 const categories = getCategories();
 // 热门标签
-const tags = getTags().slice(0, 16);
+const tags = getTags();
 // 获取网站统计数据
 const CountInfo = getCountInfo();
 // 最新文章
@@ -30,7 +29,7 @@ import "./Aside.less";
 	{
 		AsideShow.WebSitesShow && (
 			<section class="vh-aside-item user">
-				<Image class="vh-aside-avatar" src="/assets/images/lazy-loading.webp" data-vh-lz-src={Avatar} alt={Author} width="1" height="1" />
+				<img class="vh-aside-avatar" src="/assets/images/lazy-loading.webp" data-vh-lz-src={Avatar} alt={Author} />
 				<span class="vh-aside-auther">{Author}</span>
 				<p class="vh-aside-motto">{Motto}</p>
 				<section class="vh-aside-links">
@@ -61,7 +60,7 @@ import "./Aside.less";
 
 	<!-- 公告块 -->
 	{
-		AsideShow.TipsShow && (
+		SITE_CONFIG.Tips && (
 			<section class="vh-aside-item tips">
 				<span>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -71,8 +70,7 @@ import "./Aside.less";
 					公告
 				</span>
 				<div class="tips-content">
-					<p>欢迎访问我的博客，我是一个普通的大二在读大学生，喜欢分享资源和生活。</p>
-					<p>如果你对我的博客的资源分享内容感兴趣，欢迎关注我的电报频道，我的资源最全的肯定在那！</p>
+					<Fragment set:html={SITE_CONFIG.Tips} />
 				</div>
 			</section>
 		)
