@@ -124,7 +124,7 @@ export default {
     // 支付宝收款码
     AliPay: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137332.jpg',
     // 微信收款码
-    WeChat: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505050804592.jpg'
+    WeChat: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505050804813.jpg'
   },
   // 访问网页 自动推送到搜索引擎
   SeoPush: {
