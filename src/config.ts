@@ -10,7 +10,7 @@ export default {
   // 网站作者
   Author: '克喵爱吃卤面',
   // 作者头像
-  Avatar: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/kemiaotouxiang.jpg',
+  Avatar: 'https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256',
   // 网站座右铭
   Motto: '奇迹只能一时，命运总是漫长。',
   // Cover 网站缩略图
