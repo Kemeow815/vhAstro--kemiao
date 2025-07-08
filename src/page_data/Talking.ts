@@ -3,7 +3,26 @@ export default {
   api: '',
   // api 为空则使用 data 静态数据 
   // 注意：图片请用 vh-img-flex 类包裹
+  // 视频格式大致<iframe src="https://player.bilibili.com/player.html?bvid=BV1JD3SzQEK6&cid=30857036420&page=1&high_quality=1&autoplay=0"width="100%" height="500" frameborder="0" allowfullscreenscrolling="no"sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
   data: [
+    {
+      "date": "2025-07-08 15:12:34",
+      "tags": ["日记"],
+"content": `测试视频。<iframe 
+  src="https://player.bilibili.com/player.html?bvid=BV1JD3SzQEK6&cid=30857036420&page=1&high_quality=1&autoplay=0" 
+  width="100%" 
+  height="500" 
+  frameborder="0" 
+  allowfullscreen
+  scrolling="no"
+  sandbox="allow-same-origin allow-scripts allow-popups"
+></iframe>`
+    },
+{
+      "date": "2025-07-08 14:55:34",
+      "tags": ["日记"],
+"content": "测试图片。<p class='vh-img-flex' style='display: flex; justify-content: left;'><img src='https://img.314926.xyz/images/2025/07/07/lumian.webp' style='width: 50%; height: 50%; object-fit: contain;'></p>"
+    },  
 {
       "date": "2025-04-05 00:50:34",
       "tags": [

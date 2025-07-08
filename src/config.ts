@@ -2,7 +2,7 @@ export default {
   // 网站标题
   Title: '喵落阁',
   // 网站地址
-  Site: 'https://zhan.kemiao.online',
+  Site: 'https://boke.050815.xyz',
   // 网站副标题
   Subtitle: '克喵的博客',
   // 网站描述
@@ -110,7 +110,7 @@ export default {
     }
   },
   // Han Analytics 统计（https://github.com/uxiaohan/HanAnalytics）
-  HanAnalytics: { enable: true, server: 'https://han.kemiaosw.top', siteId: 'miaoluoge' },
+  HanAnalytics: { enable: true, server: 'https://han.261770.xyz/tracker.min.js', siteId: 'miaoluoge' },
   // Google 广告
   GoogleAds: {
     ad_Client: '', //ca-pub-xxxxxx

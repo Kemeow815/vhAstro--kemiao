@@ -29,7 +29,7 @@ const fmtDate = (time: string | Date, hours_status = true) => {
   // 构建时间差描述，仅在没有更大单位时显示较小单位
   return [
     years && `${years}年`,
-    months && `${months}月`,
+    months && `${months}个月`,
     days && `${days}天`,
     (hours_status || days === 0) ? hours && !years && !months && `${hours}小时` : 0,
     hours_status ? minutes && !years && !months && !days && `${minutes}分` : '',
