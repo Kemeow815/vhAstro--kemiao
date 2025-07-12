@@ -6,10 +6,14 @@ export default {
   // 视频格式大致<iframe src="https://player.bilibili.com/player.html?bvid=BV1JD3SzQEK6&cid=30857036420&page=1&high_quality=1&autoplay=0"width="100%" height="500" frameborder="0" allowfullscreenscrolling="no"sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
   data: [
     {
+"date": "2025-07-11 12:12:34",
+"tags": ["赛事速递"],
+"content": `不出所料，T1 3:2 AL，打到第五把就知道寄喽<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114837560494144&bvid=BV1qXu5z1EmL&cid=30988239076&p=1"width="100%" height="500" frameborder="0" allowfullscreenscrolling="no"sandbox="allow-same-origin allow-scripts allow-popups"></iframe>`
+},
+    {
       "date": "2025-07-08 15:12:34",
       "tags": ["日记"],
-"content": `测试视频。<iframe 
-  src="https://player.bilibili.com/player.html?bvid=BV1JD3SzQEK6&cid=30857036420&page=1&high_quality=1&autoplay=0" 
+"content": `测试视频。<iframe  src="https://player.bilibili.com/player.html?bvid=BV1JD3SzQEK6&cid=30857036420&page=1&high_quality=1&autoplay=0" 
   width="100%" 
   height="500" 
   frameborder="0" 
